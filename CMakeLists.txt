@@ -9,10 +9,19 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 set(SOURCES
     source/main/main.c
     source/main/home.c
+    source/epis_search/search_main.c
+    source/epis_storage/storage_main.c
+    source/epis_autocontainer/autocontainer_main.c
+    source/epis_distribute/distribute_main.c
+    source/epis_logs/logs_main.c
+    source/epis_pm/pm_main.c
+    source/epis_manual/manual_main.c
 )
 
 # Add the include directories
 include_directories(${PROJECT_SOURCE_DIR}/libraries)
+
+include_directories("${CMAKE_CURRENT_SOURCE_DIR}/include")
 
 # Find ncurses
 find_package(Curses REQUIRED)
